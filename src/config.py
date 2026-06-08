@@ -1,6 +1,6 @@
 import os
 
-IMAGE_PATH = "images/original/HW1_IMG_CS898BA.png"
+IMAGE_PATH = r"C:\Users\Ijeoma\Downloads\HW1_IMG_CS898BA.png"
 
 CONVERTED_DIR = "images/converted"
 TRANSFORMED_DIR = "images/transformed"
