@@ -42,3 +42,16 @@ cv2.imwrite(
     f"{CONVERTED_DIR}/hsv_equalized_rgb.png",
     rgb_equalized
 )
+import cv2
+
+from config import IMAGE_PATH, CONVERTED_DIR
+
+print("Loading image:", IMAGE_PATH)
+
+img = cv2.imread(IMAGE_PATH)
+
+if img is None:
+    print("ERROR: Image could not be loaded!")
+    exit()
+
+print("Image loaded successfully.")
