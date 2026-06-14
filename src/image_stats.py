@@ -3,6 +3,8 @@ import numpy as np
 from scipy.stats import skew, mode
 import pandas as pd
 
+#Find and print basic image statistics of the original image 
+
 from config import IMAGE_PATH
 
 img = cv2.imread(IMAGE_PATH)

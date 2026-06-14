@@ -1,5 +1,7 @@
 import cv2
 
+#Convert and save the image to greyscale, binary, and different color spaces
+
 from config import IMAGE_PATH, CONVERTED_DIR
 
 img = cv2.imread(IMAGE_PATH)
