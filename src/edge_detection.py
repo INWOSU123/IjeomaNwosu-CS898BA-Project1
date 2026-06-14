@@ -8,6 +8,7 @@ from config import BLURRED_DIR, EDGE_DIR
 all_images = [
     os.path.join(BLURRED_DIR,f)
     for f in os.listdir(BLURRED_DIR)
+    if f.endswith(".png")
 ]
 
 random.shuffle(all_images)

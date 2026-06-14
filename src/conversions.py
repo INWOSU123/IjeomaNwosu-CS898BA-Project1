@@ -2,9 +2,18 @@ import cv2
 
 #Convert and save the image to greyscale, binary, and different color spaces
 
+import cv2
+
 from config import IMAGE_PATH, CONVERTED_DIR
 
+print("Loading image:", IMAGE_PATH)
+
 img = cv2.imread(IMAGE_PATH)
+
+if img is None:
+    raise FileNotFoundError(f"Image could not be loaded: {IMAGE_PATH}")
+
+print("Image loaded successfully.")
 
 cv2.imwrite(f"{CONVERTED_DIR}/original.png", img)
 
@@ -44,16 +53,3 @@ cv2.imwrite(
     f"{CONVERTED_DIR}/hsv_equalized_rgb.png",
     rgb_equalized
 )
-import cv2
-
-from config import IMAGE_PATH, CONVERTED_DIR
-
-print("Loading image:", IMAGE_PATH)
-
-img = cv2.imread(IMAGE_PATH)
-
-if img is None:
-    print("ERROR: Image could not be loaded!")
-    exit()
-
-print("Image loaded successfully.")
