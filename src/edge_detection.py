@@ -11,6 +11,7 @@ all_images = [
     if f.endswith(".png")
 ]
 
+random.seed(898)
 random.shuffle(all_images)
 
 subset = all_images[:42]
@@ -38,6 +39,7 @@ for img_path in subset:
     sy = cv2.Sobel(gray, cv2.CV_64F,0,1)
 
     sobel = cv2.magnitude(sx,sy)
+    sobel = cv2.convertScaleAbs(sobel)
 
     cv2.imwrite(
         f"{EDGE_DIR}/{base}_sobel.png",
@@ -49,6 +51,7 @@ for img_path in subset:
         gray,
         cv2.CV_64F
     )
+    lap = cv2.convertScaleAbs(lap)
 
     cv2.imwrite(
         f"{EDGE_DIR}/{base}_laplacian.png",
@@ -83,17 +86,18 @@ for img_path in subset:
 
     px = cv2.filter2D(
         gray,
-        -1,
+        cv2.CV_64F,
         kernelx
     )
 
     py = cv2.filter2D(
         gray,
-        -1,
+        cv2.CV_64F,
         kernely
     )
 
-    prewitt = px + py
+    prewitt = cv2.magnitude(px, py)
+    prewitt = cv2.convertScaleAbs(prewitt)
 
     cv2.imwrite(
         f"{EDGE_DIR}/{base}_prewitt.png",
