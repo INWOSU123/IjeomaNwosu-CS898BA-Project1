@@ -48,6 +48,6 @@ for file in inputs:
         f"{PLOT_DIR}/{root}_comparison.png"
     )
     #display the images
-    plt.show()
+    #plt.show()
 
     plt.close()

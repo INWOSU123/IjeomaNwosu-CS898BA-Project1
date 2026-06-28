@@ -21,3 +21,22 @@ Canny
 • Created the figure's most distinct outline
 Concluding Remarks
 Because of its non-maximum suppression and hysteresis thresholding, which produced cleaner object boundaries and fewer false edges than the other methods, Canny edge detection worked best for this doorbell-camera image
+
+## Feature segmentation
+
+Otsu Advantages:
+Quick automatic threshold
+Cons:
+Light-sensitive
+Adaptive Advantages
+manages the local lights
+Cons:
+Additional background noise
+KMeans Advantages:
+makes use of color data and Improved isolation of figures
+Cons:
+K tuning is necessary. Color normalization's impact
+
+Conclusion
+
+K-Means segmentation offered the best object separation
