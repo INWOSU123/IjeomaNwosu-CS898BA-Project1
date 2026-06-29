@@ -47,17 +47,6 @@ This project performs visual statistics and image processing analysis on a doorb
 
 Canny edge detection performed best on this doorbell-camera image because non-maximum suppression and hysteresis thresholding produced cleaner object boundaries and fewer false edges than the other methods.
 
-## Files and Structure
-
-- `src/affine_transformations.py`: image transformation functions
-- `src/conversions.py`: color space conversion utilities
-- `src/gaussian_blur.py`: Gaussian blur implementation
-- `src/edge_detection.py`: edge detection algorithms
-- `src/threshold_segmentation.py`: threshold-based segmentation
-- `src/kmeans_segmentation.py`: K-Means segmentation implementation
-- `src/image_stats.py`: histogram and statistics analysis
-- `src/create_plots.py`: plotting and visualization tools
-
 ## Notes
 
 - The project is focused on enhancing image visibility and evaluating different edge detection and segmentation approaches.
