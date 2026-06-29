@@ -1,5 +1,8 @@
 import cv2 
 import numpy as np
+
+#K-Means Segmentation with K=4
+
 img=cv2.imread( "images/segmentation/normalized/normalized_rgb.png" ) 
 hsv=cv2.cvtColor( 
     img, 

@@ -1,5 +1,8 @@
 import cv2 
 import numpy as np
+
+#Quantitative Evaluation using IoU and Dice Coefficient
+
 truth=cv2.imread( "images/segmentation/reference_mask.png", 0 ) 
 methods=[ "otsu_mask.png", "adaptive_mask.png", "kmeans_mask.png" ] 
 for f in methods: 

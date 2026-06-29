@@ -1,6 +1,8 @@
 import cv2 
 
 import os
+# Create Multi-Channel Color Normalization
+
 IMAGE="images/original/HW1_IMG_CS898BA.png" 
 SAVE="images/segmentation/normalized"
 os.makedirs(SAVE,exist_ok=True)

@@ -1,5 +1,7 @@
 import cv2 
 import os 
+#Threshold Segmentation
+
 INPUT="images/segmentation/normalized/normalized_rgb.png"
 SAVE="images/segmentation"
 img=cv2.imread(INPUT) 
