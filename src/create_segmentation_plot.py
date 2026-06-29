@@ -1,9 +1,20 @@
 import matplotlib.pyplot as plt 
-files=[ "images/original/HW1_IMG_CS898BA.png", 
-        "images/segmentation/normalized/normalized_rgb.png",
-        "images/segmentation/otsu_mask.png", 
-        "images/segmentation/adaptive_mask.png",
-        "images/segmentation/kmeans_mask.png" ] 
+
+#Visualization
+
+files=[
+
+"images/original/HW1_IMG_CS898BA.png",
+
+"images/segmentation/normalized/normalized_rgb.png",
+
+"images/segmentation/otsu/otsu_mask.png",
+
+"images/segmentation/adaptive/adaptive_mask.png",
+
+"images/segmentation/kmeans/kmeans_mask.png"
+
+] 
 titles=[ "Original", "Normalized", "Otsu", "Adaptive", "KMeans" ] 
 fig,ax=plt.subplots( 
 
