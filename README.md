@@ -90,43 +90,34 @@ The following segmentation techniques were implemented:
 
 ## Repository Structure
 
+```text
 src/
-│
-├── normalize.py
-├── threshold_segmentation.py
-├── kmeans_segmentation.py
-├── metrics.py
-├── create_segmentation_plot.py
-├── config.py
-
-images/
-│
-├── original/
-│     └── HW1_IMG_CS898BA.png
-│
-├── segmentation/
-│     ├── normalized/
-│     │     └── normalized_rgb.png
-│     │
-│     ├── otsu/
-│     │     ├── otsu_mask.png
-│     │     └── otsu_segment.png
-│     │
-│     ├── adaptive/
-│     │     ├── adaptive_mask.png
-│     │     └── adaptive_segment.png
-│     │
-│     ├── kmeans/
-│     │     ├── kmeans_mask.png
-│     │     └── kmeans_segment.png
-│     │
-│     ├── reference_mask.png
-│     │
-│     └── comparison/
-│           └── final_plot.png
-
-README.md
-AI_Log.md
+├── hw1/
+│   ├── conversions.py
+│   ├── image_stats.py
+│   ├── affine_transformations.py
+│   ├── gaussian_blur.py
+│   ├── edge_detection.py
+│   ├── create_plots.py
+│   └── config.py
+├── hw2/
+│   ├── normalize.py
+│   ├── threshold_segmentation.py
+│   ├── kmeans_segmentation.py
+│   ├── metrics.py
+│   ├── create_segmentation_plot.py
+│   └── config.py
+├── images/
+│   ├── original/
+│   ├── converted/
+│   ├── transformed/
+│   ├── blurred/
+│   ├── edges/
+│   ├── plots/
+│   └── segmentation/
+├── AI_Log.md
+└── libraries.txt
+```
 
 ---
 
@@ -346,7 +337,10 @@ Measures segmentation similarity.
 
 Generated using:
 
-python create_segmentation_plot.py
+```powershell
+cd src
+python hw2/create_segmentation_plot.py
+```
 
 Output:
 
@@ -407,11 +401,15 @@ Combining classical image processing with segmentation techniques produced measu
 ## Running the Project
 
 Execute in order:
-python normalize.py
-python threshold_segmentation.py
-python kmeans_segmentation.py
-python metrics.py
-python create_segmentation_plot.py
+
+```powershell
+cd src
+python hw2/normalize.py
+python hw2/threshold_segmentation.py
+python hw2/kmeans_segmentation.py
+python hw2/metrics.py
+python hw2/create_segmentation_plot.py
+```
 
 ---
 
