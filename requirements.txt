@@ -3,3 +3,8 @@ numpy
 scipy
 matplotlib
 pandas
+tensorflow
+numpy
+pandas
+scikit-learn
+seaborn
