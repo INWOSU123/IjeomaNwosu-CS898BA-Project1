@@ -2,9 +2,7 @@ import os
 import random
 import shutil
 
-# -----------------------------
 # Folder locations
-# -----------------------------
 
 RAW_DIR = "../dataset/raw"
 
@@ -14,25 +12,20 @@ VALID_DIR = "../dataset/valid"
 
 TEST_DIR = "../dataset/test"
 
-# -----------------------------
 # Split percentages
-# -----------------------------
+
 
 TRAIN_RATIO = 0.70
 VALID_RATIO = 0.15
 TEST_RATIO = 0.15
 
-# -----------------------------
 # Create destination folders
-# -----------------------------
 
 for folder in [TRAIN_DIR, VALID_DIR, TEST_DIR]:
 
     os.makedirs(folder, exist_ok=True)
 
-# -----------------------------
 # Loop through every fish class
-# -----------------------------
 
 for fish_class in os.listdir(RAW_DIR):
 
@@ -67,10 +60,8 @@ for fish_class in os.listdir(RAW_DIR):
 
     test_images = images[valid_end:]
 
-    # -----------------------
     # Copy images
-    # -----------------------
-
+    
     for image in train_images:
 
         shutil.copy(
