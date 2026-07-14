@@ -140,7 +140,7 @@ for images, labels in train_dataset.take(1):
 
     original_output = RESULTS_DIR / "training_samples.png"
     plt.savefig(original_output, dpi=200, bbox_inches="tight")
-    plt.show()
+    #plt.show()
     plt.close()
 
     print(f"\nSaved original samples to: {original_output}")
@@ -175,7 +175,7 @@ for images, labels in train_dataset.take(1):
 
     augmented_output = RESULTS_DIR / "augmented_training_samples.png"
     plt.savefig(augmented_output, dpi=200, bbox_inches="tight")
-    plt.show()
+    #plt.show()
     plt.close()
 
     print(f"Saved augmented samples to: {augmented_output}")
