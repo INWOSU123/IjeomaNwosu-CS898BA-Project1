@@ -1,0 +1,18 @@
+Baseline Fish CNN Classification Report
+=============================================
+
+Test loss: 0.1931
+Test accuracy: 0.9247
+
+              precision    recall  f1-score   support
+
+        Bete     0.8909    0.8750    0.8829        56
+        Cray     0.8947    0.7727    0.8293        22
+     Discuss     0.9831    1.0000    0.9915        58
+        Gold     0.9683    0.9839    0.9760        62
+       Guppy     0.8966    0.9630    0.9286        54
+       Oscar     0.8684    0.8250    0.8462        40
+
+    accuracy                         0.9247       292
+   macro avg     0.9170    0.9033    0.9091       292
+weighted avg     0.9239    0.9247    0.9236       292
