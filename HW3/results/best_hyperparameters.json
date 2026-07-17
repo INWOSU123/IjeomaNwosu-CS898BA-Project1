@@ -1,0 +1,12 @@
+{
+    "experiment_number": 5,
+    "experiment_name": "experiment_05_lr_0.001_batch_32_dropout_0.3",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "dropout_rate": 0.3,
+    "completed_epochs": 14,
+    "best_epoch": 11,
+    "minimum_validation_loss": 0.19252368807792664,
+    "best_validation_accuracy": 0.9426523447036743,
+    "runtime_seconds": 257.28966188430786
+}
