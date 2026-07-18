@@ -7,7 +7,7 @@ Response Sypnosis: usually happens when OpenCV tries to save an image whose pixe
 
 ## Feature_segmentation
 
-Date and Time: 6/26/2028 4:23PM
+Date and Time: 6/26/2026 4:23PM
 Prompt:Best method to create the reference mask (ground truth image)
 Tool: chhat gpt
 Response Sypnosis:
@@ -34,7 +34,7 @@ Click Fill tool (paint bucket) or use rectangle fill
 Select Black
 Fill the entire *image*.
 
-Date and Time: 7/17/2028 7:55PM
+Date and Time: 7/17/2026 7:55PM
 Prompt:Can i paste a picture directly into my README file
 Tool: google overview
 Response Sypnosis: You can paste a picture into your README file by dragging and dropping it directly into the GitHub web editor or by using Markdown code.Here are the easiest methods to do this depending on where you are editing your code.
