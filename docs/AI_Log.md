@@ -33,3 +33,8 @@ In Paint:
 Click Fill tool (paint bucket) or use rectangle fill
 Select Black
 Fill the entire *image*.
+
+Date and Time: 7/17/2028 7:55PM
+Prompt:Can i paste a picture directly into my README file
+Tool: google overview
+Response Sypnosis: You can paste a picture into your README file by dragging and dropping it directly into the GitHub web editor or by using Markdown code.Here are the easiest methods to do this depending on where you are editing your code.

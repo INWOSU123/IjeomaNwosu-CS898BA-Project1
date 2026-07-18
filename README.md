@@ -549,12 +549,9 @@ The optimized CNN achieved the highest overall performance.
 | Metric | Baseline | Optimized |
 | :--- | :---: | :---: |
 | **Test Accuracy** | 92.47% | 93.15% |
-| **Macro Precision** | 91.70% | 92.19% |
-| **Macro Recall** | 90.33% | 91.09% |
-| **Macro F1-Score** | 90.91% | 91.45% |
-| **Weighted Precision** | 92.39% | 93.18% |
-| **Weighted Recall** | 92.47% | 93.15% |
-| **Weighted F1-Score** | 92.36% | 93.00% |
+| **Precision** | 91.70% | 92.19% |
+| **Recall** | 90.33% | 91.09% |
+| **F1-Score** | 90.91% | 91.45% |
 
 The optimized CNN improved every evaluation metric over the baseline model, demonstrating that systematic hyperparameter tuning enhanced overall generalization performance.
 
