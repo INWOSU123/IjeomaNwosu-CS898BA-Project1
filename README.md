@@ -491,11 +491,13 @@ A systematic grid search was performed to identify the optimal combination of hy
 
 The search evaluated three learning rates, two batch sizes, and two dropout rates, resulting in twelve different experiments.
 
-Hyperparameter Search Space
-Hyperparameter Values Tested
-Learning Rate 0.01, 0.001, 0.0001
-Batch Size 32, 64
-Dropout 0.30, 0.50
+## Hyperparameter Search Space
+
+| Hyperparameter | Values Tested |
+| :--- | :--- |
+| **Learning Rate** | 0.01, 0.001, 0.0001 |
+| **Batch Size** | 32, 64 |
+| **Dropout** | 0.30, 0.50 |
 
 Each experiment trained a completely new CNN initialized with random weights.
 
@@ -505,13 +507,18 @@ Best Hyperparameters
 
 The optimal configuration was:
 
-Hyperparameter Best Value
-Learning Rate 0.001
-Batch Size 32
-Dropout 0.30
-Best Epoch 11
-Validation Accuracy 94.27%
-Minimum Validation Loss 0.1925
+## Best Hyperparameters
+
+The optimal configuration was:
+
+| Hyperparameter | Best Value |
+| :--- | :--- |
+| **Learning Rate** | 0.001 |
+| **Batch Size** | 32 |
+| **Dropout** | 0.30 |
+| **Best Epoch** | 11 |
+| **Validation Accuracy** | 94.27% |
+| **Minimum Validation Loss** | 0.1925 |
 
 The selected learning rate of 0.001 produced stable optimization without oscillation.
 
@@ -533,19 +540,21 @@ Increasing dropout from 0.30 to 0.50 reduced model capacity and slightly decreas
 
 Experiment 5 produced the lowest validation loss and was therefore selected as the final optimized model.
 
-Final Model Performance
+## Final Model Performance
 
 The optimized CNN achieved the highest overall performance.
 
-Baseline vs Optimized Model
-Metric Baseline Optimized
-Test Accuracy 92.47% 93.15%
-Precision 91.70% 92.19%
-Recall 90.33% 91.09%
-F1-Score 90.91% 91.45%
-Weighted Precision 92.39% 93.18%
-Weighted Recall 92.47% 93.15%
-Weighted F1-Score 92.36% 93.00%
+## Baseline vs Optimized Model
+
+| Metric | Baseline | Optimized |
+| :--- | :---: | :---: |
+| **Test Accuracy** | 92.47% | 93.15% |
+| **Macro Precision** | 91.70% | 92.19% |
+| **Macro Recall** | 90.33% | 91.09% |
+| **Macro F1-Score** | 90.91% | 91.45% |
+| **Weighted Precision** | 92.39% | 93.18% |
+| **Weighted Recall** | 92.47% | 93.15% |
+| **Weighted F1-Score** | 92.36% | 93.00% |
 
 The optimized CNN improved every evaluation metric over the baseline model, demonstrating that systematic hyperparameter tuning enhanced overall generalization performance.
 
