@@ -1,0 +1,18 @@
+Optimized Model Classification Report
+==================================================
+
+Test loss: 0.2224
+Test accuracy: 0.9315
+
+              precision    recall  f1-score   support
+
+        Bete     0.8833    0.9464    0.9138        56
+        Cray     0.8571    0.8182    0.8372        22
+     Discuss     0.9828    0.9828    0.9828        58
+        Gold     0.9836    0.9677    0.9756        62
+       Guppy     0.9153    1.0000    0.9558        54
+       Oscar     0.9091    0.7500    0.8219        40
+
+    accuracy                         0.9315       292
+   macro avg     0.9219    0.9109    0.9145       292
+weighted avg     0.9318    0.9315    0.9300       292

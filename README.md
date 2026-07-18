@@ -418,3 +418,192 @@ python hw2/create_segmentation_plot.py
 All AI assistance used for this assignment was documented in:
 
 AI_Log.md
+
+## Homework Three: Deep Learning for Fish Classification
+
+Overview
+
+Homework Three extends the image processing techniques developed in Homework One and the image segmentation methods implemented in Homework Two by introducing deep learning for multi-class image classification. The objective of this assignment was to design, train, optimize, and evaluate a custom Convolutional Neural Network (CNN) capable of classifying six different fish species. Unlike transfer learning approaches, this project was completed using a CNN built entirely from scratch in TensorFlow/Keras to satisfy the course requirement prohibiting pretrained models.
+
+The completed pipeline includes dataset preparation, image preprocessing, data augmentation, baseline CNN development, systematic hyperparameter optimization, quantitative performance evaluation, and qualitative analysis.
+
+## Data Preprocessing
+
+Every image was standardized before training to ensure consistent input dimensions and improve learning efficiency.
+
+The preprocessing pipeline consisted of:
+
+Image resizing to 128 × 128 pixels
+Pixel normalization to the range [0,1]
+Automatic batching
+Efficient data loading using TensorFlow datasets
+
+Normalizing the pixel values prevented large numerical variations during optimization and accelerated convergence during training.
+
+## Data Augmentation
+
+To improve generalization and reduce overfitting, data augmentation was applied only to the training dataset.
+
+The augmentation pipeline included:
+
+Random horizontal flipping
+Small random rotations
+Random brightness adjustments
+
+Validation and testing images were intentionally left unchanged to ensure that performance metrics reflected the model's ability to generalize to unseen data.
+
+The augmentation strategy exposed the CNN to a larger variety of image appearances without changing the underlying fish species.
+
+## Baseline CNN Training
+
+The baseline CNN was trained using the following hyperparameters.
+
+Hyperparameter  Value
+Optimizer Adam
+Learning Rate 0.001
+Batch Size 32
+Dropout 0.30
+Maximum Epochs 20
+
+Early stopping and model checkpointing were incorporated to prevent unnecessary training once validation performance stopped improving.
+
+The baseline model achieved stable convergence and demonstrated strong learning throughout training.
+
+## Baseline Training Analysis
+
+The baseline training curves show a consistent increase in both training and validation accuracy throughout the training process.
+
+Training accuracy increased from 38.02% during the first epoch to 94.73% by the final epoch.
+
+Validation accuracy increased from 60.57% to 96.06%, demonstrating that the CNN rapidly learned discriminative image features.
+
+Similarly, both the training and validation loss curves steadily decreased throughout training, indicating stable optimization.
+
+The validation loss reached its lowest values near the later training epochs and remained close to the training loss. The small gap between the two curves demonstrates that the network generalized well to unseen validation images.
+
+The learning curves show no evidence of severe overfitting. Training accuracy and validation accuracy remained closely aligned, while both loss curves followed similar downward trends.
+
+The slightly higher validation accuracy is expected because data augmentation was applied only to the training images, making the training samples more challenging than the validation images.
+
+Hyperparameter Optimization
+
+A systematic grid search was performed to identify the optimal combination of hyperparameters.
+
+The search evaluated three learning rates, two batch sizes, and two dropout rates, resulting in twelve different experiments.
+
+Hyperparameter Search Space
+Hyperparameter Values Tested
+Learning Rate 0.01, 0.001, 0.0001
+Batch Size 32, 64
+Dropout 0.30, 0.50
+
+Each experiment trained a completely new CNN initialized with random weights.
+
+The model achieving the lowest validation loss was selected as the optimized model.
+
+Best Hyperparameters
+
+The optimal configuration was:
+
+Hyperparameter Best Value
+Learning Rate 0.001
+Batch Size 32
+Dropout 0.30
+Best Epoch 11
+Validation Accuracy 94.27%
+Minimum Validation Loss 0.1925
+
+The selected learning rate of 0.001 produced stable optimization without oscillation.
+
+The batch size of 32 enabled frequent parameter updates that improved convergence.
+
+A dropout rate of 0.30 provided sufficient regularization while maintaining the network's learning capacity.
+
+Hyperparameter Search Discussion
+
+The hyperparameter search demonstrates that moderate optimization settings produced the strongest performance.
+
+Experiments using a learning rate of 0.01 converged rapidly but produced substantially higher validation loss, indicating unstable optimization.
+
+Experiments using a learning rate of 0.0001 learned more slowly and did not achieve the same validation performance within the allotted training epochs.
+
+Batch size 32 consistently outperformed batch size 64, suggesting that more frequent parameter updates improved generalization.
+
+Increasing dropout from 0.30 to 0.50 reduced model capacity and slightly decreased validation performance.
+
+Experiment 5 produced the lowest validation loss and was therefore selected as the final optimized model.
+
+Final Model Performance
+
+The optimized CNN achieved the highest overall performance.
+
+Baseline vs Optimized Model
+Metric Baseline Optimized
+Test Accuracy 92.47% 93.15%
+Precision 91.70% 92.19%
+Recall 90.33% 91.09%
+F1-Score 90.91% 91.45%
+Weighted Precision 92.39% 93.18%
+Weighted Recall 92.47% 93.15%
+Weighted F1-Score 92.36% 93.00%
+
+The optimized CNN improved every evaluation metric over the baseline model, demonstrating that systematic hyperparameter tuning enhanced overall generalization performance.
+
+Classification Report Discussion
+
+The optimized CNN classified six fish species with high overall accuracy.
+
+The Discuss class achieved the strongest performance with an F1-score of 98.28%, indicating that this species possessed highly distinctive visual features.
+
+The Gold and Guppy classes also achieved excellent classification performance with F1-scores exceeding 95%.
+
+The Guppy class achieved 100% recall, demonstrating that every Guppy image in the testing dataset was correctly identified.
+
+The Oscar class produced the lowest F1-score (82.19%) and the lowest recall (75%). These results indicate that Oscar images shared visual similarities with several other fish species, making them more difficult for the CNN to distinguish.
+
+The Cray class also produced lower performance than the remaining species, suggesting additional visual overlap with neighboring classes.
+
+## Confusion Matrix Analysis
+
+The confusion matrix demonstrates strong classification performance across the six fish species.
+
+Most predictions lie along the main diagonal, indicating that the majority of fish images were correctly classified.
+
+The largest source of classification error involved the Oscar class.
+
+Out of forty Oscar test images:
+
+30 were correctly classified as Oscar.
+5 were incorrectly classified as Bete.
+3 were incorrectly classified as Guppy.
+2 were incorrectly classified as Cray.
+
+These errors indicate that Oscar shares several visual characteristics with these species.
+
+The Guppy class exhibited perfect recall, correctly classifying every Guppy image in the testing dataset.
+
+The Discuss and Gold classes also demonstrated excellent separability, producing only isolated classification errors.
+
+## Overall Discussion
+
+The completed fish classification pipeline successfully demonstrates the effectiveness of a custom CNN trained entirely from scratch.
+
+Image preprocessing standardized the dataset, while data augmentation increased variability in the training images and reduced the likelihood of overfitting.
+
+The baseline CNN established a strong starting point for classification, and systematic hyperparameter optimization further improved performance.
+
+The optimized model achieved 93.15% classification accuracy, correctly classifying the overwhelming majority of test images.
+
+The strongest classification performance occurred for the Discuss, Gold, and Guppy classes because these species possess distinctive visual characteristics.
+
+Most classification errors involved the Oscar class, whose appearance overlaps more closely with other fish species.
+
+The combination of preprocessing, augmentation, dropout regularization, early stopping, and hyperparameter optimization produced a robust CNN capable of accurately classifying six fish species without relying on pretrained models.
+
+![training samples](image-2.png)
+Baseline Accuracy Curve
+![baseline accuracy curve](HW3/results/baseline_accuracy_curve.png)
+Baseline Loss Curve
+![baseline Loss curve](HW3/results/baseline_loss_curve.png)
+Final Comparison Grid
+![Final Comparison Grid](HW3/results/final_comparison/final_model_comparison_grid.png)

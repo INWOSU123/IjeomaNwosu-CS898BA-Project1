@@ -1,0 +1,26 @@
+[
+    {
+        "model": "Baseline Model",
+        "test_loss": 0.19306795299053192,
+        "keras_accuracy": 0.9246575236320496,
+        "accuracy": 0.9246575342465754,
+        "macro_precision": 0.9169872542492432,
+        "macro_recall": 0.9032602005720286,
+        "macro_f1": 0.9090549069573459,
+        "weighted_precision": 0.9238851027747421,
+        "weighted_recall": 0.9246575342465754,
+        "weighted_f1": 0.9235980423758572
+    },
+    {
+        "model": "Optimized Model",
+        "test_loss": 0.22242136299610138,
+        "keras_accuracy": 0.931506872177124,
+        "accuracy": 0.9315068493150684,
+        "macro_precision": 0.9218644191536566,
+        "macro_recall": 0.9108518242973194,
+        "macro_f1": 0.9145068005282719,
+        "weighted_precision": 0.9318314426656927,
+        "weighted_recall": 0.9315068493150684,
+        "weighted_f1": 0.9300210791784544
+    }
+]
