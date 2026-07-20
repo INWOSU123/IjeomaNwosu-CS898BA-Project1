@@ -1,0 +1,38 @@
+[
+    {
+        "channel": "Channel A: Original RGB",
+        "target_class_id": 12,
+        "iou": 0.0,
+        "dice": 0.0,
+        "predicted_foreground_pixels": 215073,
+        "ground_truth_foreground_pixels": 347241,
+        "true_positive": 0,
+        "false_positive": 215073,
+        "false_negative": 347241,
+        "true_negative": 3763062
+    },
+    {
+        "channel": "Channel B: HSV V Normalized",
+        "target_class_id": 12,
+        "iou": 0.0,
+        "dice": 0.0,
+        "predicted_foreground_pixels": 214793,
+        "ground_truth_foreground_pixels": 347241,
+        "true_positive": 0,
+        "false_positive": 214793,
+        "false_negative": 347241,
+        "true_negative": 3763342
+    },
+    {
+        "channel": "Channel C: RGB Channels Normalized",
+        "target_class_id": 12,
+        "iou": 0.0,
+        "dice": 0.0,
+        "predicted_foreground_pixels": 215073,
+        "ground_truth_foreground_pixels": 347241,
+        "true_positive": 0,
+        "false_positive": 215073,
+        "false_negative": 347241,
+        "true_negative": 3763062
+    }
+]

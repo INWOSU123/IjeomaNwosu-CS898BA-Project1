@@ -1,0 +1,4 @@
+channel,target_class_id,iou,dice,predicted_foreground_pixels,ground_truth_foreground_pixels,true_positive,false_positive,false_negative,true_negative
+Channel A: Original RGB,12,0.0,0.0,215073,347241,0,215073,347241,3763062
+Channel B: HSV V Normalized,12,0.0,0.0,214793,347241,0,214793,347241,3763342
+Channel C: RGB Channels Normalized,12,0.0,0.0,215073,347241,0,215073,347241,3763062
